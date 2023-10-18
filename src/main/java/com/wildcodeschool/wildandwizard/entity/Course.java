@@ -12,7 +12,7 @@ public class Course {
     private Long id;
     private String name;
 
-    @ManyToMany(mappedBy = "courses")
+    @ManyToMany(mappedBy = "courses", cascade = CascadeType.REFRESH)
     private List<Wizard> wizards = new ArrayList<>();
 
     public Course() {
